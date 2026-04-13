@@ -24,7 +24,7 @@ This will save the points chosen as a numpy array in the ``datasets/`` directory
 ```
 python evaluate_datasets.py --task muller_brown --strategy al --sampler maximin --model gp --size 100 --batch_strat topk --seed 1 --dataset_dir ./datasets/
 ```
-This will save metrics for model performance in ``model_results.csv``, which can be used for subsequent analysis. Both scripts should only take a few minutes to run.
+This will save metrics for model performance in ``model_results.csv``, which can be used for subsequent analysis. Both scripts should only take a few minutes to run. However, we have observed that the runtime of neural networks varies by hardware. While these scripts run quickly on high-performance computing resources with plenty of memory, they may take a while on a single device. For testing, we encourage you to use alternative models.
 
 ### Survey of Training Data Selection Algorithms
 
