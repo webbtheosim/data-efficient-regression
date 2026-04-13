@@ -14,7 +14,16 @@ All code has been tested and used for Python version 3.10.9. Installation should
 
 ### Demo
 
-
+Here, we include an example for how to (1) generate a training set using a specified algorithm and (2) evaluate the quality of that dataset. To generate a training set, you can run:
+```
+cd survey/
+python gen_dataset.py --strategy al --sampler maximin --model nn --task muller_brown --size 100 --batch_strat topk --seed 1
+```
+This will save the points chosen as a numpy array in the ``datasets/`` directory. To evaluate models trained on this dataset, you can run:
+```
+python evaluate_datasets.py --task muller_brown --strategy al --sampler maximin --model nn --size 100 --batch_strat topk --seed 1 --dataset_dir ./datasets/
+```
+This will save metrics for model performance in ``model_results.csv``, which can be used for subsequent analysis.
 
 ### Survey of Training Data Selection Algorithms
 
