@@ -8,6 +8,7 @@ We note that the results in this manuscript were obtained by permuting a commmon
 ### Installation Guide
 Please set up the appropriate environment by running:
 ```
+conda create -n reg-env python=3.10
 pip install -r requirements.txt
 ```
 All code has been tested and used for Python version 3.10.9. Installation should take only a few minutes.
@@ -23,7 +24,7 @@ This will save the points chosen as a numpy array in the ``datasets/`` directory
 ```
 python evaluate_datasets.py --task muller_brown --strategy al --sampler maximin --model nn --size 100 --batch_strat topk --seed 1 --dataset_dir ./datasets/
 ```
-This will save metrics for model performance in ``model_results.csv``, which can be used for subsequent analysis.
+This will save metrics for model performance in ``model_results.csv``, which can be used for subsequent analysis. Both scripts should only take a few minutes to run.
 
 ### Survey of Training Data Selection Algorithms
 
