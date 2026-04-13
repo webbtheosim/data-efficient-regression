@@ -76,7 +76,6 @@ class GP:
                 optimizer.step()
 
                 if i > 1000 and np.abs(loss.item() - losses[-100]) / np.abs(losses[-100]) < 1e-3:
-                    print('Stopping early!')
                     break
 
                 if print_progress and (i+1) % 100 == 0:

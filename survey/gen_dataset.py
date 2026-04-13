@@ -271,7 +271,7 @@ if __name__ == '__main__':
 
         # Save chosen indices to file.
         file_str = f'{args.task}-sf-{args.sampler}-{args.size}-{args.seed}.npy'
-        np.save(f'./survey-datasets/{file_str}', chosen_idx)
+        np.save(f'./datasets/{file_str}', chosen_idx)
 
     elif args.strategy == 'sf_adaptive':
         start = time.perf_counter()
@@ -281,7 +281,7 @@ if __name__ == '__main__':
 
         # Save chosen indices to file.
         file_str = f'{args.task}-sf_adaptive-{args.size}-{args.seed}.npy'
-        np.save(f'./survey-datasets/{file_str}', chosen_idx)
+        np.save(f'./datasets/{file_str}', chosen_idx)
         np.save(f'./chosen_features/{file_str}', chosen_feat)
 
     elif args.strategy == 'al_adaptive':
@@ -292,7 +292,7 @@ if __name__ == '__main__':
 
         # Save chosen indices to file.
         file_str = f'{args.task}-al_adaptive-{args.sampler}-{args.model}-{args.batch_strat}-{args.size}-{args.seed}.npy'
-        np.save(f'./survey-datasets/{file_str}', chosen_idx)
+        np.save(f'./datasets/{file_str}', chosen_idx)
         np.save(f'./chosen_features/{file_str}', chosen_feat)
 
     # Execute active learning, if requested.
@@ -304,4 +304,4 @@ if __name__ == '__main__':
 
         # Save chosen indices to file.
         file_str = f'{args.task}-al-{args.sampler}-{args.model}-{args.batch_strat}-{args.size}-{args.seed}.npy'
-        np.save(f'./survey-datasets/{file_str}', chosen_idx)
+        np.save(f'./datasets/{file_str}', chosen_idx)

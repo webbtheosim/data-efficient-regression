@@ -133,7 +133,6 @@ class NeuralNetwork:
 
         params = {
             'hidden_layer_sizes': [(100,100), (50,50), (10,10)],
-            'solver': ['adam', 'lbfgs']
         }
         mlp = GridSearchCV(
             estimator = MLPRegressor(
@@ -147,7 +146,7 @@ class NeuralNetwork:
             param_grid=params,
             scoring='r2',
             cv=5,
-            #verbose=5,
+            verbose=5,
             n_jobs=1
         )
         mlp.fit(X, y)
@@ -315,7 +314,7 @@ if __name__ == '__main__':
         X = X[:,chosen_feat]
 
     # Get data indices.
-    train_idx = np.load(f'./{args.dataset_dir}/{filename}.npy') # MODIFY THIS!
+    train_idx = np.load(f'./{args.dataset_dir}/{filename}.npy')
     X_train = X[train_idx]
     y_train = y[train_idx]
 
