@@ -5,11 +5,16 @@ This repository includes the code and data used to generate the results in "Mini
 
 We note that the results in this manuscript were obtained by permuting a commmon protocol. The code in its current form will not generate all data present in the manuscript. The user must adjust file inputs (or the files themselves) accordingly to recreate ALL results present in the main text and SI. However, we provide all data present in the manuscript, as described below.
 
-### Setup
+### Installation Guide
 Please set up the appropriate environment by running:
 ```
 pip install -r requirements.txt
 ```
+All code has been tested and used for Python version 3.10.9. Installation should take only a few minutes.
+
+### Demo
+
+
 
 ### Survey of Training Data Selection Algorithms
 
