@@ -146,7 +146,7 @@ class NeuralNetwork:
             param_grid=params,
             scoring='r2',
             cv=5,
-            verbose=5,
+            #verbose=5,
             n_jobs=1
         )
         mlp.fit(X, y)
